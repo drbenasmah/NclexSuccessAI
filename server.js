@@ -1,15 +1,14 @@
 const PORT = 8000;
 const express = require("express");
 const cors = require("cors");
-const { async } = require("q");
+require("dotenv").config();
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
 // const API_KEY = "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";
-const API_KEY = "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"; //api from benasco2016
-
+const API_KEY = process.env.API_KEY;
 app.post("/completions", async (req, res) => {
   const options = {
     method: "POST",

@@ -1,11 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import "./index.css";
 import App from "./App";
+import CustomNavbar from "./components/navbar/navbar"; // Import your CustomNavbar component
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
+    <CustomNavbar />
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root")
 );

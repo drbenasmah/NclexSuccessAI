@@ -4,6 +4,13 @@
   color: #ffffff; /* White for text */
   font-family: "Open Sans", sans-serif;
 }
+html {
+  text-size-adjust: 100%;
+  font-feature-settings: normal;
+  font-family: "Söhne", "Open Sans", sans-serif;
+  font-variation-settings: normal;
+  /* background-color: #287c9d; */
+}
 
 body {
   margin: 0;
@@ -30,6 +37,12 @@ button {
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light blue on hover */
 }
 
 nav {
@@ -76,8 +89,8 @@ nav {
 
 .input-container {
   position: relative;
-  width: 100%;
-  max-width: 650px;
+  width: 90%;
+  /* max-width: 650px; */
 }
 
 input {
@@ -101,9 +114,44 @@ input:focus {
   outline: none;
 }
 
+input::placeholder {
+  color: #999;
+}
+
 #submit {
   position: absolute;
   bottom: 15px;
   right: 0;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+#submit:hover {
+  background-color: rgba(14, 14, 168, 0.372); /* Light blue on hover */
+}
+
+.feed {
+  overflow: scroll;
+  width: 90%;
+  padding: 0;
+}
+
+.feed li {
+  box-sizing: border-box; /* Include padding and borders in the total width */
+  display: flex;
+  background-color: #155c79;
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.feed p {
+  color: rgba(236, 225, 225, 0.8);
+  font-size: 14px;
+  text-align: left;
+  margin-right: 5vw;
+}
+
+.feed p.role {
+  min-width: 100px;
 }
